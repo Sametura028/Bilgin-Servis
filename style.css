@@ -1,0 +1,284 @@
+@import url('https://fonts.cdnfonts.com/css/sofia-pro');
+
+* {
+    font-family: 'Sofia Pro', sans-serif;
+}
+
+.one-line-header {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.clear {
+    clear: both;
+    height: 5rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.mobile-ver {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+.menu-items.menu-items {
+    max-width: 400px;
+    list-style: none;
+    width: 400px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+
+}
+
+.logo img {
+    object-fit: cover;
+}
+
+.menu-item a {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.social-icons {
+    max-width: 230px;
+    list-style: none;
+    width: 230px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lines .line {
+    background: black;
+    width: 40px;
+    transition: all .4s;
+    height: 1px;
+}
+
+.midle {
+    opacity: 0;
+}
+
+.line-1 {
+    transform: rotate(35deg);
+    transform-origin: top left;
+}
+
+.line-3 {
+    transform: rotate(-35deg);
+    transform-origin: bottom left;
+}
+
+.lines {
+    display: none;
+    flex-direction: column;
+    height: 25px;
+    justify-content: space-between;
+}
+
+.social-icons .social-icon a {
+    font-size: 1.25rem;
+
+    border-radius: 100%;
+    padding: .5rem .7rem;
+    cursor: pointer;
+    transition: all .2s;
+    text-align: center;
+    color: #343435;
+}
+
+header .social-icons .social-icon a {
+    border: 1px solid #343435;
+}
+
+.social-icons .social-icon a i {
+    transition: all .2s;
+}
+
+.social-icons .social-icon a:hover {
+    background-color: yellow;
+    border: 1px solid yellow;
+}
+
+.social-icons .social-icon a:hover i {
+    color: white;
+}
+
+.banner {
+    background: #F1F1F1;
+}
+
+.section-space {
+    padding: 6rem 0;
+
+}
+
+.section-space-2 {
+    padding: 1rem 0;
+
+}
+
+.propertys {
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.blog.card {
+    padding: 3px;
+    border: 2px solid transparent !important;
+    transition: all .4s;
+}
+
+.blog.card:hover {
+    border: 2px solid yellow !important;
+}
+
+.blogs {
+    height: 540px;
+}
+
+.blog .card-body p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.blog .card-body {
+    height: 200px;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+
+
+.blog.card:hover.blog .card-body {
+    height: 250px;
+}
+
+.blog.card:hover .card-body a.btn {
+    margin-bottom: 0rem;
+}
+
+.blog .card-body a.btn {
+    margin-bottom: -2rem;
+    transition: all .5s;
+    border: 1px solid yellow;
+}
+
+.blog .card-body a.btn:hover {
+    border: 1px solid yellow;
+    background: white;
+    color: yellow !important;
+}
+
+.cuce-kopru {
+    position: absolute;
+    bottom: 4rem;
+    right: 0;
+}
+
+footer .social-icon a {
+    border: 1px solid white;
+}
+
+@media screen and (max-width: 1200px) {
+    .mobile-ver {
+        max-width: 645px;
+    }
+
+    .cuce-kopru {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .mobile-ver,
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile-ver {
+        max-width: 100%;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        background: white;
+        transition: all.4s;
+        z-index: 99;
+
+    }
+
+    .open {
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+
+    .lines {
+        display: flex;
+        z-index: 999;
+    }
+
+    header {
+        position: relative;
+    }
+
+    .menu-items {
+        height: 220px;
+    }
+
+}
+
+@media screen and (max-width: 994px) {
+    .blogs {
+        height: auto;
+    }
+
+    .blog .card-body {
+        height: 250px;
+        overflow: hidden;
+        transition: all .5s;
+
+    }
+
+    .blog {
+        margin: 1rem auto;
+    }
+
+    .blogs {
+        justify-content: center;
+    }
+
+    .blog.card {
+        border: 2px solid yellow !important;
+    }
+
+    .blog.card.card-body a.btn {
+        margin-bottom: 0rem;
+    }
+}
