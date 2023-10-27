@@ -4,12 +4,45 @@
     font-family: 'Sofia Pro', sans-serif;
 }
 
+.white-sections {
+    background: #FFFBE5;
+}
+
+.yellow-sections {
+    background: #FED400;
+}
+
+body,
+html {
+    scroll-behavior: smooth;
+}
+
 .one-line-header {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     line-clamp: 1;
     -webkit-box-orient: vertical;
+}
+
+.card-text p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.card-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.card-text p {
+    margin: 0;
 }
 
 .clear {
@@ -73,18 +106,18 @@
     height: 1px;
 }
 
-.midle {
-    opacity: 0;
-}
+/*.midle {*/
+/*    display: ;*/
+/*}*/
 
 .line-1 {
-    transform: rotate(35deg);
+    transform: rotate(37deg);
     transform-origin: top left;
 }
 
 .line-3 {
-    transform: rotate(-35deg);
-    transform-origin: bottom left;
+    transform: rotate(-37deg);
+    transform-origin: top left;
 }
 
 .lines {
@@ -96,13 +129,15 @@
 
 .social-icons .social-icon a {
     font-size: 1.25rem;
-
+    display: flex;
     border-radius: 100%;
-    padding: .5rem .7rem;
+    padding: 0.5em 0.75rem;
     cursor: pointer;
     transition: all .2s;
     text-align: center;
     color: #343435;
+    align-items: center;
+    justify-content: center;
 }
 
 header .social-icons .social-icon a {
@@ -114,8 +149,9 @@ header .social-icons .social-icon a {
 }
 
 .social-icons .social-icon a:hover {
-    background-color: yellow;
-    border: 1px solid yellow;
+    background-color: #FED400;
+    border: 1px solid #FED400;
+    text-decoration: none;
 }
 
 .social-icons .social-icon a:hover i {
@@ -143,25 +179,26 @@ header .social-icons .social-icon a {
 
 .blog.card {
     padding: 3px;
-    border: 2px solid transparent !important;
+    border: 2px solid #0000001c !important;
     transition: all .4s;
 }
 
 .blog.card:hover {
-    border: 2px solid yellow !important;
+    border: 2px solid #FED400 !important;
 }
 
 .blogs {
-    height: 540px;
+    height: 470px;
 }
 
-.blog .card-body p {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    line-clamp: 5;
-    -webkit-box-orient: vertical;
-}
+
+/*.blog .card-body p {*/
+/*    overflow: hidden;*/
+/*    display: -webkit-box;*/
+/*    -webkit-line-clamp: 5;*/
+/*    line-clamp: 5;*/
+/*    -webkit-box-orient: vertical;*/
+/*}*/
 
 .blog .card-body {
     height: 200px;
@@ -180,15 +217,15 @@ header .social-icons .social-icon a {
 }
 
 .blog .card-body a.btn {
-    margin-bottom: -2rem;
+    margin-bottom: -5rem;
     transition: all .5s;
-    border: 1px solid yellow;
+    border: 1px solid #FED400;
 }
 
 .blog .card-body a.btn:hover {
-    border: 1px solid yellow;
+    border: 1px solid #FED400;
     background: white;
-    color: yellow !important;
+    color: #FED400 !important;
 }
 
 .cuce-kopru {
@@ -199,6 +236,139 @@ header .social-icons .social-icon a {
 
 footer .social-icon a {
     border: 1px solid white;
+}
+
+footer .social-icons {
+    float: right;
+}
+
+footer.bg-dark {
+    padding: 1rem 0;
+}
+
+.yellow-banner {
+    background: #FED400;
+    padding: 4rem 0;
+}
+
+.contact-link,
+.contact-blok {
+    color: #343435;
+    transition: all .4s
+}
+
+.contact-blok {
+    padding: 4rem 0;
+    background: #F9F9F9;
+    border-radius: 1rem;
+}
+
+.contact-blok {
+    justify-content: space-between;
+}
+
+.contact-blok:hover {
+    background-color: #FED400;
+}
+
+.contact-blok:hover .contact-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-link div.text-center {
+    max-width: 200px;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-link i {
+    font-size: 2rem;
+}
+
+.form-inputs:not(.form-button) {
+    padding-left: .75rem !important;
+}
+
+.form-inputs {
+    outline: 1px solid rgba(128, 128, 128, 0.634);
+    border: 0;
+
+    border-radius: 10px;
+}
+
+.form-button:hover {
+    background: white !important;
+    color: #FED400 !important;
+}
+
+.form-button {
+    outline: none;
+    border: 1px solid #FED400;
+    transition: all .4s !important;
+    padding: .5rem 3rem;
+
+}
+
+textarea {
+    resize: none !important;
+}
+
+.form-inputs {
+    padding: 0.5rem 0;
+}
+
+.form-inputs:focus-within {
+    outline: 1px solid #FED400;
+
+}
+
+.form-area {
+    border: 1px solid rgba(128, 128, 128, 0.634);
+    ;
+}
+
+.formRow {
+    padding: 2rem;
+}
+
+.formRow .col-md-6.col-sm-12,
+.formRow .col-12 {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.all-blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+}
+
+.blog-card {
+    height: 500px;
+}
+
+.blog-image img {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+}
+
+.blog-detail {
+    padding: .5rem;
+    border-radius: 10px;
+    border: 1px solid #FED400;
+}
+
+.content {
+    padding: 0 1rem;
+}
+
+.header {
+    padding: 1rem;
 }
 
 @media screen and (max-width: 1200px) {
@@ -266,6 +436,10 @@ footer .social-icon a {
 
     }
 
+    .blog.card .card-body a.btn {
+        margin-bottom: 0rem;
+    }
+
     .blog {
         margin: 1rem auto;
     }
@@ -275,10 +449,32 @@ footer .social-icon a {
     }
 
     .blog.card {
-        border: 2px solid yellow !important;
+        border: 2px solid #FED400 !important;
     }
 
     .blog.card.card-body a.btn {
         margin-bottom: 0rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .contact-bloks,
+    .form-container .row {
+        row-gap: 1rem;
+    }
+
+    .form-container .row .col-md-6.col-lg-6.col-sm-12:first-child {
+        height: 500px;
+    }
+
+    footer .social-icons {
+        float: none;
+        margin: 0 auto;
+    }
+
+    footer .row {
+        text-align: center;
+        row-gap: 1rem;
     }
 }
