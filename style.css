@@ -203,23 +203,31 @@ header .social-icons .social-icon a {
 .blog .card-body {
     height: 200px;
     overflow: hidden;
+    position: relative;
     transition: all .5s;
 }
 
 
 
 .blog.card:hover.blog .card-body {
-    height: 250px;
+    height: 230px;
 }
 
 .blog.card:hover .card-body a.btn {
-    margin-bottom: 0rem;
+    transform: translateY(0px);
+    opacity: 1;
+    bottom: .8rem;
 }
 
 .blog .card-body a.btn {
-    margin-bottom: -5rem;
+    transform: translateY(70px);
+    padding: 0.375rem 2rem;
     transition: all .5s;
     border: 1px solid #FED400;
+
+    position: absolute;
+    opacity: 0;
+    bottom: -4.5rem;
 }
 
 .blog .card-body a.btn:hover {
@@ -379,6 +387,15 @@ textarea {
     .cuce-kopru {
         display: none;
     }
+
+    .all-blogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blog-card .card-body,
+    .blog.card:hover.blog .card-body {
+        height: 230px !important;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -477,4 +494,32 @@ textarea {
         text-align: center;
         row-gap: 1rem;
     }
+
+    .all-blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .blog-card {
+        height: 580px;
+    }
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .blog-card {
+        height: 520px;
+    }
+
+
+}
+
+@media screen and (max-width: 375px) {
+
+    .blog-card {
+        height: 450px;
+    }
+
+
 }
